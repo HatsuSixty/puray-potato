@@ -48,8 +48,15 @@ function update_results(query)
     let results = document.getElementById("results");
     remove_all_child_nodes(results);
 
-    for (r of search_anime(query)["results"])
+    for (let r of search_anime(query)["results"])
     {
         results.appendChild(search_result_to_element(r));
     }
 }
+window.update_results = update_results;
+
+let input = document.createElement("input");
+input.setAttribute("type", "search");
+input.setAttribute("onchange", "update_results(this.value)");
+
+document.getElementById("search").appendChild(input);
