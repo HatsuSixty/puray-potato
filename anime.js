@@ -25,7 +25,7 @@ function season_data_to_element(data)
     for (let ep of data["episodes"]) {
         let ep_name = document.createElement("a");
         let ep_text = document.createTextNode(ep["nome"]);
-        ep_name.setAttribute("href", `javascript:window.location.href = './player.html?ep=${ep["id_episodios"]}';`);
+        ep_name.setAttribute("href", `javascript:window.location.href = 'player.html?ep=${ep["id_episodios"]}';`);
         ep_name.appendChild(ep_text);
 
         finalresult.appendChild(ep_name);

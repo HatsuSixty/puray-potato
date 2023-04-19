@@ -33,7 +33,7 @@ function search_result_to_element(result)
 
     let watch_link = document.createElement("a");
     let watch_text = document.createTextNode("watch");
-    watch_link.setAttribute("href", `javascript:window.location.href = './anime.html?id=${result["id_animes"]}';`);
+    watch_link.setAttribute("href", `javascript:window.location.href = 'anime.html?id=${result["id_animes"]}';`);
     watch_link.appendChild(watch_text);
 
     finalresult.appendChild(watch_link);
