@@ -16,4 +16,4 @@ cmd = run(["git", "status"], capture_output=True, text=True)
 if not ("nothing to commit" in cmd.stdout):
     run(["git", "add", "random-str-idk-whatis"])
     run(["git", "commit", "-m", "Update token-like-thingy"])
-    run(["sh", "-c", f"yes \"{get_password()}\" | git push origin master"])
+    run(["git", "push", "origin", "master"])
