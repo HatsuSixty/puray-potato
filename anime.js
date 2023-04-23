@@ -2,7 +2,7 @@ import { get, remove_all_child_nodes } from "./common.js"
 
 function get_anime_by_id(id)
 {
-    let r = get(`https://puray.moe/_next/data/LHZ2IWEpdNmFBp62OvpQj/anime/${id}.json?id=${id}`)
+    let r = get(`https://puray.moe/_next/data/${get("./random-str-idk-whatis")}/anime/${id}.json?id=${id}`)
     return JSON.parse(r);
 }
 
